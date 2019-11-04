@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "BankBalance";
+}
+
+    <div class="text-center">
+        <h1>Bank Balance</h1>
+
+        <form>
+            Bank Account Balance: <br>
+            <input type="number" id="bankamount">
+            <br>
+            Income:<br>
+            <input type="number" id="incomeamount">
+            <br />
+            Total Expenses:<br>
+            <input type="number" id="expenses">
+            <br />
+
+
+            Account Balance:<br />
+            <input type="number" id="total">
+            <br />
+
+            <br />
+            <input type="button" onclick="getTotal()" value="Get Total" />
+            <br />
+        </form>
+
+        <p>"There is no such thing called Privacy in today's world."</p>
+
+    </div>
+
+<script type="text/javascript">
+   function getTotal(){
+
+      var first = document.getElementById('bankamount') .value;
+      var second = document.getElementById('incomeamount').value;
+      var third = document.getElementById('expenses') .value;
+      var total  = parseInt(first) + parseInt(second) - parseInt(third);
+
+        document.getElementById('total') .value = total;
+    }
+ </script>
