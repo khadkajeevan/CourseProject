@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ExpenseTrack.Data.Migrations
+namespace ExpenseTrack.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -45,6 +45,51 @@ namespace ExpenseTrack.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BankBalance",
+                columns: table => new
+                {
+                    UserID = table.Column<string>(nullable: false),
+                    BankAccountBalance = table.Column<decimal>(nullable: false),
+                    Income = table.Column<decimal>(nullable: false),
+                    TotalExpenses = table.Column<decimal>(nullable: false),
+                    AccountBalance = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BankBalance", x => x.UserID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ExpensesCategory",
+                columns: table => new
+                {
+                    ExpensesCategoryId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Date = table.Column<DateTime>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
+                    TotalExpenses = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ExpensesCategory", x => x.ExpensesCategoryId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TargetedExpenses",
+                columns: table => new
+                {
+                    ExpenseID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ExpenseAmount = table.Column<decimal>(nullable: false),
+                    TotalExpenses = table.Column<decimal>(nullable: false),
+                    RemainingExpenseAmount = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TargetedExpenses", x => x.ExpenseID);
                 });
 
             migrationBuilder.CreateTable(
@@ -209,6 +254,15 @@ namespace ExpenseTrack.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "BankBalance");
+
+            migrationBuilder.DropTable(
+                name: "ExpensesCategory");
+
+            migrationBuilder.DropTable(
+                name: "TargetedExpenses");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

@@ -16,39 +16,41 @@ namespace ExpenseTrack.Models
         public DbSet<TargetedExpenses> TargetedExpenses { get; set; }
         public DbSet<ExpensesCategory> ExpensesCategory { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ExpenseTrackDB(DbContextOptions<ExpenseTrackDB> options)
+            : base(options)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Integrated Security=true;Database=ExpenseTracker");
         }
-    }
-
-    public class ExpensesCategory
-    {
-    
-        public int ExpensesCategoryId { get; set; }
-        public DateTime Date { get; set; }
-        public decimal TotalExpenses { get; set; }
-        public string Description { get; set; }
-
     }
 
     public class BankBalance
     {
         [Key]
-        public int  { get; set; }
-        public int Income { get; set; }
-        public string UserId { get; set; }
-        public int Balance { get; set; }
-        public int ExpenseTotal { get; set; }
+        
+        public int UserID { get; set; }
+        public decimal BankAccountBalance { get; set; }
+        public decimal Income { get; set; }       
+        public decimal TotalExpenses { get; set; }
+        public decimal AccountBalance { get; set; }
     }
 
     public class TargetedExpenses
     {
+        [Key]
+        public int ExpenseID { get; set; }
+        public decimal ExpenseAmount { get; set; }        
+        public decimal TotalExpenses { get; set; }
+        public decimal RemainingExpenseAmount { get; set; }
+    }
+
+    public class ExpensesCategory
+    {
+       [Key]
+        public int ExpensesCategoryId { get; set; }
+        public DateTime Date { get; set; }
+        public string Description { get; set; }
+        public decimal TotalExpenses { get; set; }
        
-        public int TargetAmount { get; set; }
-        public string UserId { get; set; }
-        public int ExpenseTotal { get; set; }
-        public int RemainingExpense { get; set; }
+
     }
 
 }

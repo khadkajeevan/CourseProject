@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\CourseProject\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj": {}
+    "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\ExpenseTracker\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\CourseProject\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj": {
+    "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\ExpenseTracker\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\CourseProject\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj",
+        "projectUniqueName": "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\ExpenseTracker\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj",
         "projectName": "ExpenseTrack",
-        "projectPath": "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\CourseProject\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj",
+        "projectPath": "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\ExpenseTracker\\directory\\ExpenseTrack\\ExpenseTrack\\ExpenseTrack.csproj",
         "packagesPath": "C:\\Users\\Deepa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\CourseProject\\directory\\ExpenseTrack\\ExpenseTrack\\obj\\",
+        "outputPath": "C:\\Users\\Deepa\\Desktop\\MSSA\\Cohort 7 2019\\Homeworks\\ExpenseTracker\\directory\\ExpenseTrack\\ExpenseTrack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
